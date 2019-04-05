@@ -2,6 +2,8 @@
 node ("docker_host") {
     stage("Deploy site"){
     
+    def scmVars = checkout scm
+
     sh "docker-compose up -d"
     }
 
